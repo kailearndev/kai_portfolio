@@ -1,12 +1,12 @@
 
 const Tech = () => {
   return (
-    <div className=" grid grid-cols-2 max-[480px]:grid-cols-1 gap-4 mt-6">
+    <div className=" grid grid-cols-2 max-[480px]:grid-cols-1 gap-4 mt-6 dark:text-white">
       <div className="flex flex-col gap-4">
         <div className="flex gap-4 items-center">
-          <div className="w-[55px] h-[40px]" >
+          <div>
             <svg
-            className="h-[100%] w-[100%]"
+              className="h-[40px] w-[40px]"
               width="15"
               height="15"
               viewBox="0 0 15 15"
@@ -60,11 +60,11 @@ const Tech = () => {
         <div className="mt-5  flex gap-10">
           <div className="flex flex-col">
             <div className="text-3xl">8+</div>
-            <div className="">Project complete</div>
+            <div className="">Project completed</div>
           </div>
           <div className="flex flex-col">
             <div className="text-3xl">3</div>
-            <div className="">Year experience</div>
+            <div className="">Years experience</div>
           </div>
         </div>
       </div>

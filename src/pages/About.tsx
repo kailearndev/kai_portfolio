@@ -2,14 +2,17 @@ import { Button } from "@/components/ui/button";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import cv from "../assets/cv.pdf";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import meow from "../assets/meow.json"
+
+import Lottie from "lottie-react";
+
 const About = () => {
   return (
-    <div className="flex items-center justify-center mt-8">
+    <div className="flex items-center justify-center mt-8 dark:text-white">
       <div className=" flex flex-col items-center gap-[10px]">
-        <img
-          className="w-[90px] h-[90px] rounded-full"
-          src="https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/406732859_381109920982699_4706318215548269313_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=YFNFJw1uGQ0AX9DZo_W&_nc_ht=scontent.fsgn5-3.fna&oh=00_AfAbydmPXHPHi7Zq8AA6-N60gBtXGhoXYbxLMztnfK909Q&oe=65D70A45"
-        />
+        <div style={{ width: "90px", height: "90px", borderRadius: "50%" }}>
+          <Lottie className="rounded-xl overflow-hidden" animationData={meow} />
+        </div>
         <div className="flex items-center gap-2">
           <TypewriterEffect
             words={[
@@ -20,7 +23,7 @@ const About = () => {
                 text: "I'm",
               },
               {
-                text: "Kai",
+                text: "Luan (Kai)",
               },
             ]}
           />
@@ -61,16 +64,13 @@ const About = () => {
         <div className="text-center text-sm text-white">
           <TextGenerateEffect
             className=""
-            words="Working with React JS/TS for web admin and web apps, eager to explore"
+            words="Working with React JS/TS "
           />
-          <TextGenerateEffect words="backend and expand my full-stack skills." />
+          <TextGenerateEffect words="Backend and expand my full-stack skills." />
         </div>
         <div className="flex items-center gap-5">
-          <Button className="hover:bg-yellow-300">
-            <a
-              target="_blank"
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=kaidev.contact@gmail.com"
-            >
+          <Button className="hover:bg-slate-700 hover:translate-x-1 hover:animate-waving-hand">
+            <a target="_blank" href="mailto:kaidev.contact@gmail.com">
               Hire me ✌️{" "}
             </a>
           </Button>
@@ -79,7 +79,7 @@ const About = () => {
             download
             href={cv}
           >
-            <div>Download CV</div>
+            <div className="">Download CV</div>
             <svg
               width="15"
               height="15"
