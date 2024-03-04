@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: info-kai-dev
+    image: info-dev
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 1602:1602

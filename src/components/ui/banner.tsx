@@ -1,8 +1,10 @@
 import { BannerLayer, ParallaxBanner } from "react-scroll-parallax";
+import { TypewriterEffect } from "./typewriter-effect";
 const Banner = () => {
   const background: BannerLayer = {
     image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-background.jpg",
+      "https://i.pinimg.com/originals/eb/50/87/eb50875a68b04b0480fa929af2c7547c.gif",
+
     translateY: [0, 50],
     opacity: [1, 0.3],
     scale: [1.05, 1, "easeOutCubic"],
@@ -16,17 +18,27 @@ const Banner = () => {
     expanded: false,
     children: (
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-6xl md:text-8xl text-white font-mono">Hi</h1>
+        <TypewriterEffect
+          words={[
+            {
+              text: "Hello",
+            },
+            {
+              text: "and",
+            },
+            {
+              text: "thank",
+            },
+            {
+              text: "for",
+            },
+            {
+              text: "coming.",
+            },
+          ]}
+        />
       </div>
     ),
-  };
-
-  const foreground: BannerLayer = {
-    image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-foreground.png",
-    translateY: [0, 15],
-    scale: [1, 1.1, "easeOutCubic"],
-    shouldAlwaysCompleteAnimation: true,
   };
 
   const gradientOverlay: BannerLayer = {
@@ -40,7 +52,7 @@ const Banner = () => {
 
   return (
     <ParallaxBanner
-      layers={[background, headline, foreground, gradientOverlay]}
+      layers={[background, headline, gradientOverlay]}
       className="aspect-[2/1] bg-gray-900"
     />
   );

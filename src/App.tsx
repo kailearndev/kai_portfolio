@@ -1,5 +1,7 @@
 import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "./components/theme-provider";
+import { Button } from "./components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,9 +10,6 @@ import {
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Tech from "./pages/Tech";
-import { Button } from "./components/ui/button";
-import { Moon, Sun } from "lucide-react";
-import { ParallaxBanner } from "react-scroll-parallax";
 
 function App() {
   const { setTheme } = useTheme();
